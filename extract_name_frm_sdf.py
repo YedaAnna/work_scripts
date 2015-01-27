@@ -1,7 +1,8 @@
 # @filename:extract_name_frm_sdf.py
 # @usage:
 # @author: AbhiramG
-# @description: reads complete sdf file and extracts molecule names if present and writes them in xlsx sheet
+# @description: 1. reads complete sdf file and extracts molecule names
+#               2. writes them in xlsx sheet
 # @tags:sdf
 # @version: 1.0 b
 # @date: Tue Jan 20 2015
@@ -36,7 +37,7 @@ for lines in ER_sdf:
         else:
             nameline = False
 
-    if nameline == True and column[0] != '>': 
+    if nameline == True and column[0] != '>':
         """and len(column) != 0"""
         name.append(column[0])
         nameline = False
